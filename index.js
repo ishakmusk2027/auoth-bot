@@ -21,7 +21,7 @@ passport.deserializeUser((obj, done) => {
 let strategy = new Strategy({
   clientID: "process.env.ID", // bot id
   clientSecret: "process.env.SECRET", // inside https://discord.com/developers/applications
-  callbackURL: "https://auoth-bot.onrender.com/callback", // ex "https://mysteriouscodes.com/callback"
+  callbackURL: "https://auoth-bot-2.onrender.com//callback", // ex "https://mysteriouscodes.com/callback"
   scope: ["identify"]
 }, (accessToken, refreshToken, profile, done) => {
   process.nextTick(() => done(null, profile));
