@@ -79,7 +79,7 @@ app.get("/callback", passport.authenticate("discord", {
 
 
     // Replace 'WEBHOOK_URL' with your actual Discord webhook URL
-    const webhookURL = 'https://discord.com/api/webhooks/1216469886751211642/0dMT0we8_UcB05GPQD9qS_m2S0zgnCyRSEWnT3yNRWN3pflrUzfkg6cvss2wzyp3cUmK';
+    const webhookURL = 'process.env.WEBHOOK';
 
     // Send embed to webhook
     await axios.post(webhookURL, { embeds: [embed] });
