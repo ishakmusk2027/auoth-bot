@@ -19,8 +19,8 @@ passport.deserializeUser((obj, done) => {
 });
 
 let strategy = new Strategy({
-  clientID: "1216099371527962765", // bot id
-  clientSecret: "ymsYURuAyyyHcW_bEUtlTbA5Ds4osgXP", // inside https://discord.com/developers/applications
+  clientID: "process.env.ID", // bot id
+  clientSecret: "process.env.SECRET", // inside https://discord.com/developers/applications
   callbackURL: "https://1eab6e35-48e7-4ac3-b808-711d375acaee-00-1s1vcwwtaywq4.riker.replit.dev/callback", // ex "https://mysteriouscodes.com/callback"
   scope: ["identify"]
 }, (accessToken, refreshToken, profile, done) => {
